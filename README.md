@@ -19,7 +19,9 @@ You'll need Node and MongoDB installed.
 3. Run `node server/seed.js` to create a starter coach account (check `server/seed.js` for the username), or skip this and just register your own accounts through the site.
 4. `./start.sh` boots MongoDB and the server together, `./stop.sh` shuts both down.
 
-Then open **http://localhost:3001**. (It's 3001 instead of 3000/5000 mainly because macOS's AirPlay Receiver likes to grab 5000.)
+Heads up: `start.sh`/`stop.sh` assume MongoDB is installed as a standalone binary at `~/mongodb/bin/mongod`, which is how it's set up on the machine this was built on. If you installed MongoDB a different way (Homebrew, Docker, a system service), just make sure `mongod` is already running on the default port and start the server yourself with `npm start` instead of `./start.sh`.
+
+Then open **http://localhost:3001**. (It's 3001 instead of 3000/5000 mainly because macOS's AirPlay Receiver likes to grab 5000.) From there you can register as either a coach or a student — coaches get a dashboard to set their hours and approve lesson requests, students get to browse coaches and book time with them.
 
 ## How it's put together
 
